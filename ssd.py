@@ -17,7 +17,7 @@ warnings.filterwarnings("ignore")
 
 class SSD(object):
     def __init__(self, confidence=0.5, nms_iou=0.45):
-        self.model_path = r'E:\ssd-pytorch-master-streamlit\logs\4.pth'
+        self.model_path = r'logs/4.pth'
         self.classes_path = 'model_data/class.txt'
         self.input_shape = [640, 640]
         self.backbone = "resnet50"
