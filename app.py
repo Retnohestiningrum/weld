@@ -18,7 +18,9 @@ st.markdown("""
 class Sidebar():
     def __init__(self):
         st.sidebar.image(
-            'E:\ssd-pytorch-master-streamlit\img\cacat.png', width="stretch")
+            'img/cacat.png',
+            width="stretch"
+        )
         st.sidebar.markdown(
             "### Atur Konfigurasi?")
         self.confidence_threshold = st.sidebar.slider(
@@ -43,7 +45,7 @@ tab1, tab2 = st.tabs(["📖 Overview", "🧪 Test"])
 
 with tab1:
     st.subheader("Network Architecture")
-    st.image("E:\ssd-pytorch-master-streamlit\img\ssdresnet50.png",
+    st.image("img/ssdresnet50.png",
              caption="SSD-ResNet50", width="stretch")
     st.markdown(
         "**Penjelasan Arsitektur:**\n"
