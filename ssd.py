@@ -18,7 +18,7 @@ warnings.filterwarnings("ignore")
 class SSD(object):
     def __init__(self, confidence=0.5, nms_iou=0.45):
         self.model_path = r'E:\ssd-pytorch-master-streamlit\logs\4.pth'
-        self.classes_path = r'E:\ssd-pytorch-master-streamlit\model_data\class.txt'
+        self.classes_path = 'model_data/class.txt'
         self.input_shape = [640, 640]
         self.backbone = "resnet50"
         self.confidence = confidence
@@ -79,7 +79,7 @@ class SSD(object):
             top_boxes = results[0][:, :4]
 
         font = ImageFont.truetype(
-            r'E:\ssd-pytorch-master-streamlit\model_data\simhei.ttf', size=max(int(0.03 * np.shape(image)[1]), 12))
+            r'model_data/simhei.ttf', size=max(int(0.03 * np.shape(image)[1]), 12))
         thickness = max(
             (np.shape(image)[0] + np.shape(image)[1]) // self.input_shape[0], 1)
 
